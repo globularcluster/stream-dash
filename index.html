@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ALLEYCAT HALLOWEEN</title>
+
+	<script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+	<script>
+		function setupVideo() {
+			var url = "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd";
+			var player = dashjs.MediaPlayer().create();
+			player.initialize(document.querySelector("#videoplayer"), url, true);
+		}
+	</script>
+
+	<style>
+		video {
+			width: 80%;
+			height: 80%;
+		}
+	</style>
+
+</head>
+
+<body onload="setupVideo()">
+
+	<video id="videoplayer" controls></video>
+
+</body>
+
+</html>
